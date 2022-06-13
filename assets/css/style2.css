@@ -1,0 +1,468 @@
+/*========================================================================*/
+
+
+/* ///////////////////////////////////////////////////////////////////// 
+// 03 - Preloader
+/////////////////////////////////////////////////////////////////////*/
+
+
+/* ==========================================================================
+	Global Styles
+========================================================================== */
+
+
+/* ==========================================================================Portfolio========================================================================== */
+
+.container2 {
+    margin-top: 5%;
+}
+
+.down-arrow-btn {
+    width: auto;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    margin: 15px 5px 15px 5px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.down-arrow-btn:hover,
+.down-arrow-btn:focus {
+    color: #fff;
+    background: rgba(0, 0, 0, 1);
+}
+
+.portfolio img {
+    height: 300px;
+    width: 100%;
+}
+
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    /* Firefox 3.5+,IE10 */
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+& Safari 6+*/
+    -webkit-transition: all .6s ease;
+    /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden;
+    /* Fix for transition flickering */
+}
+
+img.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+.row-offset-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.row-offset-0>* {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.effects {
+    padding-left: 15px;
+}
+
+.effects .img {
+    position: relative;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.effects .img:nth-child(n) {
+    margin-right: 5px;
+}
+
+.effects .img:first-child {
+    margin-left: -15px;
+}
+
+.effects .img:last-child {
+    margin-right: 0;
+}
+
+.effects .img img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    filter: none!important;
+    -webkit-filter: grayscale(0%);
+    overflow: hidden;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.overlay-effect .img i {
+    font-size: 30px;
+}
+
+.overlay-effect .overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.overlay-effect .overlay a.expand {
+    left: 0;
+    right: 0;
+    bottom: 47%;
+    margin: 0 auto -30px auto;
+}
+
+.overlay-effect .img.hover .overlay {
+    height: 100%;
+    opacity: 1;
+}
+
+.img img {
+    width: -webkit-calc(100%+40px) !important;
+    width: calc(100%+40px) !important;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -moz-transition: opacity 0.35s, -moz-transform 0.35s;
+    -o-transition: opacity 0.35s, -o-transform 0.35s;
+    -webkit-transform: translate3d(-40px, 0, 0);
+    transform: translate3d(-40px, 0, 0);
+    -ms-transform: translate3d(-40px, 0, 0);
+}
+
+.img:hover img {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(-40px, 0, 0);
+}
+
+.hype {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
+}
+
+
+/* ==========================================================================Subscribe========================================================================== */
+
+
+/* ==========================================================================CTA========================================================================== */
+
+
+/* Inputs styles */
+
+.contact .form-control {
+    border-radius: 0!important;
+    ;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.contact .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #B0B0B0;
+}
+
+.btn-send {
+    background: #E04343;
+    color: white;
+    transition: all 0.4s;
+    border-radius: 0;
+    float: right;
+}
+
+.btn-send:hover {
+    background: #FFE800;
+    color: #E04343
+}
+
+button,
+button:focus,
+button:hover,
+button:active {
+    outline: none!important;
+}
+
+
+/* ==========================================================================Footer========================================================================== */
+
+footer a {
+    color: #a1a9b0;
+}
+
+footer {
+    background-color: #f3f5f8;
+    padding: 40px 0 30px;
+}
+
+footer p {
+    color: #808080;
+}
+
+
+/* ==========================================================================FlexSlider Custom CSS========================================================================== */
+
+#servicesSlider {
+    margin-top: 70px;
+}
+
+ul.slides li {
+    margin-bottom: 20px;
+}
+
+.features-slider {
+    position: relative;
+    padding: 11% 100px 10% 100px;
+    height: 400px;
+    background-color: #3F6184;
+}
+
+.features-slider ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.features-slider ul li {
+    width: 100%;
+}
+
+.features-slider li h1 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.features-slider li p {
+    color: #fff;
+    font-size: 14px;
+}
+
+#clientSlider .flex-control-nav {
+    text-align: left;
+}
+
+#clientSlider .flex-control-nav li:first-child {
+    margin: 0px 4px 0px 0px;
+}
+
+#clientSlider small {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.flex-control-paging li a.flex-active {
+    background: #E04343;
+    border-color: #E04343;
+}
+
+.color-bg .flex-control-paging li a {
+    background: white;
+    border-color: white;
+}
+
+.color-bg .flex-control-paging li a.flex-active {
+    background: #FFE800;
+    border-color: #FFE800;
+}
+
+
+/* ==========================================================================Waypoints========================================================================== */
+
+.wp1,
+.wp2,
+.wp3,
+.wp4,
+.wp5,
+.wp6 {
+    visibility: hidden;
+}
+
+.bounceInLeft,
+.bounceInRight,
+.fadeInUp,
+.fadeInUpDelay,
+.fadeInDown,
+.fadeInUpD,
+.fadeInLeft,
+.fadeInRight {
+    visibility: visible;
+}
+
+.delay-05s {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.delay-1s {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+.wp3 {
+    background: url('../img/iphone-bg.png') no-repeat center center;
+    background-position: 200px 10px;
+    height: 100%;
+}
+
+
+/* ==========================================================================Responsive========================================================================== */
+
+
+/* 320px (iPhone) */
+
+@media screen and (max-width:414px) {
+    .scrollto {
+        padding: 95px 0px 0px 0px;
+    }
+    .hero h1 {
+        font-size: 100px;
+        line-height: 80px;
+        margin-top: 65px;
+    }
+}
+
+
+/* 480px (WVGA - Low End Windows Phone) */
+
+@media screen and (max-width:480px) {
+    .wrapper {
+        background: #f3f5f8;
+        height: 640px;
+    }
+    .iphone {
+        display: none;
+    }
+    .fluid-white {
+        display: none;
+    }
+    .wp2,
+    .wp4,
+    .wp5,
+    .light-box {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* xGA iPad */
+
+@media screen and (max-width:1024px) {
+    .wp3 {
+        background-position: 50px 0;
+    }
+    .swag {
+        background-attachment: scroll;
+    }
+    .subscribe {
+        background-attachment: scroll;
+    }
+}
+
+
+/* 1200px (Small Desktop,Netbook) */
+
+@media screen and (max-width:1280px) {
+    .wp3 {
+        background-position: 50px 0;
+    }
+}
+
+
+/* Bootstrap 990px Breakpoint to 480px */
+
+@media screen and (min-width:480px) and (max-width:991px) {
+    .iphone {
+        display: none;
+    }
+    .fluid-white {
+        display: none;
+    }
+    .wrapper {
+        background: #f3f5f8;
+        height: 540px;
+    }
+    .wp2,
+    .wp4,
+    .wp5,
+    .light-box {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:50em) {
+    .icon-list a {
+        padding: 0.5em 0em;
+        margin: 0 5px;
+        font-size: 1em;
+    }
+}
+
+
+/** Responsive fixes **/
+
+@media screen and (max-width:767px) {
+    .inner {
+        padding-top: 10px;
+        text-align: center;
+    }
+    .hero h3 {
+        letter-spacing: 10px;
+    }
+    .hero {
+        padding-bottom: 0;
+    }
+    .subscribe input[type=text] {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .btn-send {
+        float: none;
+        margin-bottom: 80px;
+    }
+    .effects .img {
+        margin-bottom: 15px;
+    }
+    .show-menu .icon-list a {
+        display: block;
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+    }
+    .show-menu .menu-wrap {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .hero {
+        padding: 0px;
+    }
+    .subscribe {
+        padding-bottom: 40px;
+    }
+}
